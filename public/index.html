@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Stats</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+  </style>
+</head>
+<body>
+  <h1>NBA Player Search</h1>
+  <div class="container">
+    <form class="search-parts" id="form" >
+      <div>
+        <input type="text" name="name" placeholder="Who do you want to look up?" id="playername" autocomplete="off" spellcheck="false">
+      </div>
+        <button type="button" onClick="getPlayerInfo()">Search</button>
+    </form>
+    <!-- <img src="mj-crying.png" alt="crying mj meme"> -->
+  </div>
+  <div class="name">
+    <div><span id="firstname"></span></div>
+    <div><span id="lastname"></span></div>
+    <div><span id="team"></span></div>
+  </div>
+  <div class="displayboard" id="hideMe">
+    <div class="name-and-team">
+      <span id="name"></span>
+      <span id="team-name"></span>
+    </div>
+    <div class="stats">
+      <div class="season-header">
+        <h3>2020-2021 SEASON STATS</h3>
+      </div>
+      <ul class="stats-bulk">
+        <div class="pts">
+          <li>PTS</li>
+          <li><span id="pts"></span></li>
+        </div>
+        <div class="reb">
+          <li>REB</li>
+          <li><span id="reb"></span></li>
+        </div>
+        <div class="ast">
+          <li>AST</li>
+          <li><span id="ast"></span></li>
+        </div>
+        <div class="stl">
+          <li>STL</li>
+          <li><span id="stl"></span></li>
+        </div>
+      </ul>
+
+    </div>
+  <!-- <table class="stats-table">
+    <thead>
+      <tr>
+        <th>Season</th>
+        <th>GP</th>
+        <th>MIN</th>
+        <th>FGM</th>
+        <th>FGA</th>
+        <th>FG3M</th>
+        <th>FG3A</th>
+        <th>FTM</th>
+        <th>FTA</th>
+        <th>OREB</th>
+        <th>DREB</th>
+        <th>REB</th>
+        <ht>AST</ht>
+        <th>STL</th>
+        <th>BLK</th>
+        <th>TURNOVERS</th>
+        <th>PF</th>
+        <th>PTS</th>
+        <th>FG_PCT</th>
+        <th>FG3_PCT</th>
+        <th>FT_PCT</th>
+      </tr>
+    </thead>
+    <tbody>
+      {userTable}
+    </tbody>
+  </table> -->
+  </div>
+
+</body>
+
+<script src="functionality.js"></script>
+
+</html>
+
